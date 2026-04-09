@@ -1,0 +1,7 @@
+apiVersion: v2
+name: vault
+version: 1.0.0
+dependencies:
+  - name: openbao
+    version: "0.6.0"
+    repository: https://openbao.github.io/openbao-helm
