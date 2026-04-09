@@ -5,8 +5,13 @@ metadata:
   namespace: monitoring
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: nginx
+  tls:
+    - hosts:
+        - grafana.sayzx.fr
+      secretName: grafana-tls
   rules:
     - host: grafana.sayzx.fr
       http:
