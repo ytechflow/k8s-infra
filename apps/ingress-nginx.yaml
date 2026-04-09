@@ -9,9 +9,6 @@ spec:
     repoURL: https://github.com/ytechflow/k8s-infra
     targetRevision: HEAD
     path: ingress-nginx
-    helm:
-      valueFiles:
-        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: ingress-nginx
